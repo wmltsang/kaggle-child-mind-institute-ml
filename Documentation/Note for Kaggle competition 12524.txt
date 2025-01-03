@@ -1,0 +1,21 @@
+Note for Kaggle competition 12/5/24
+
+Final data examine for the main dataset
+
+quick search - is it better to train the model based on test data col instead of train
+season related col - get one with less null value, look at Jason notebook
+
+
+Class separability in SII - will aim to use LDA, KPCA if is not linear  
+
+Model Evaluation -
+stratified k-fold cross-validation to est model general performance
+use ROC AUC score to check model general performance
+ 
+Gradient boosting finding hyperparameter - grid search for fine tuning the performance of the ML model
+
+Class imbalance
+upsampling the minority class in sii
+
+
+
