@@ -1,13 +1,94 @@
 # Kaggle Competition - Child Mind Institute: Problematic Internet Use
 
-The high level goal of this competition is to analyze children's physical activity data to detect early indicators of problematic internet and technology use. 
+## Project Overview
+I participated in the Child Mind Institute's Kaggle competition, where the objective was to build a predictive model capable of identifying early indicators of problematic internet use in children based on their physical activity data. The competition involved complex datasets, challenging both data preprocessing and model optimization skills.
 
-About the data, there are descriptive data such as each individual's BMI, season to participate for tracking the physical activitiy and there is another dataset associated with each individual where they have continuous data to track there physical activity with the watches they wore on them. The goal is to take this data and understand how they correlate to the sii level that we need to predict that is an indicator they have problematic internet use.
 
-## Learning curve and learning from others
+## Results
+I achieved a 37% accuracy score compared to the highest score of 48%, positioning my performance at approximately 77% of the top leaderboard score. This competition's challenging nature made even modest improvements significant and rewarding.
 
-This is my first ever machine learning competition which involves a lot of learning. I have partnered myself with Jason, a data science director from Nashville,TN and a software developer Shashi in Nepal with strong quantitative background for this competition. 
+![alt text](image-7.png)
+![alt text](image-8.png)
 
-Key takeaway with Jason would be his strength to do early exploration on the data, by understanding the data, the way that he structures the approaches to them and provides me advice along the way. He encourages me to have my own model that would help learning. Dont be afraid to change codes and save different version and that way you have your thoughts throughout the codes and would not get lost with different model in the same notebook. Clean codes and documentiong and sectioning out are key to save you time later. I was able to get 0.369 where highest score is 0.482 that tells how challenging this competition was. 
+## Project Objectives
+The primary goal of this project was to:
 
-With Shashi, we decided to read a machine learning book that was called Python Machine Learning by 
+Analyze descriptive data and physical activity data of children.
+
+Develop a predictive model for the problematic internet use indicator (SII).
+
+Demonstrate skills in data preprocessing, feature engineering, and model evaluation.
+
+## Collaboration and Learning
+
+This was my first machine learning competition, involving significant collaboration and learning. I worked with:
+
+Jason (Data Science Director, Nashville, TN): Guided on data exploration, model structuring, and code management best practices.
+
+Shashi (Software Developer, Nepal): Co-learned from the book Python Machine Learning by Sebastian Raschka & Vahid Mirijalili, focusing on foundational algorithms and best practices.
+
+Key Takeaways:
+
+Importance of data exploration before modeling.
+
+Structuring code with clear documentation and version control.
+
+Balancing the need for clean code with experimentation.
+
+## Data Exploration and Cleaning
+
+Key Steps:
+
+Target Variable Relationship: The sii field showed a strong correlation with the PCIAT fields, indicating a positive relationship.
+![alt text](image-1.png)
+
+
+Handling Missing Values:
+
+Dropped rows with null values in the sii column (around 30% missing). Dropped columns with null values for data simplication.
+![alt text](image-2.png)
+
+
+Feature Engineering:
+
+Created statistical summaries for time-series data (e.g., mean, median, standard deviation).
+
+Appended these summaries to the main dataset to avoid data duplication.
+
+## Data Preparation for Machine Learning
+
+Steps Taken:
+
+Dataset Alignment: Compared training and test datasets to ensure consistent feature sets.
+
+![alt text](image-3.png)
+
+Encoding: Applied LabelEncoder() to transform categorical data into numerical values.
+![alt text](image-4.png)
+
+Target Column Balancing: Adjusted class weights manually to address imbalance.
+![alt text](image-5.png)
+
+Splitting: Training data was split into feature and target sets without standard train-test splits due to data limitations.
+
+## Model Selection and Performance
+
+Model Used: HistGradientBoostingClassifier() chosen for its ability to handle missing values effectively.
+
+Performance:
+
+Test Accuracy: 65%
+
+Cross-validation score: 47.2%, indicating slight overfitting.
+![alt text](image-6.png)
+
+## Further Analysis and Next Steps
+
+Implement strategies to handle missing data more selectively.
+
+Explore alternative techniques such as imputing with labeled values.
+
+Refine feature engineering techniques further.
+
+
+
